@@ -160,12 +160,12 @@ jobs:
       - name: Build application
         run: |
              cd build/
-             cmake .. -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release
+             cmake .. -G "Visual Studio 17 2022" -DCMAKE_BUILD_TYPE=Release
              nmake
 
       # Deploy application
       - name: Deploy application
-        run: sh deploy_windows.sh -i -c -p
+        run: sh deploy_windows.sh -c -p
 
       # Upload application ZIP
       - name: Upload application ZIP
