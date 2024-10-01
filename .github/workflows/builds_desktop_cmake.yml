@@ -165,7 +165,7 @@ jobs:
 
       # Deploy application
       - name: Deploy application
-        run: sh deploy_windows.sh -i -c -p
+        run: sh deploy_windows.sh -c -p
 
       # Upload application ZIP
       - name: Upload application ZIP
