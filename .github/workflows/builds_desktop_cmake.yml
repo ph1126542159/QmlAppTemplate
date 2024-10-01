@@ -145,11 +145,11 @@ jobs:
           version: ${{env.QT_VERSION}}
 
       # Install NSIS (already installed in 'windows-2022')
-      #- name: Install NSIS
-      #  run: |
-      #       Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-      #       scoop bucket add extras
-      #       scoop install nsis
+      - name: Install NSIS
+       run: |
+            Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+            scoop bucket add extras
+            scoop install nsis
 
       # Setup env
       - name: Setup env
